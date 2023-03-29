@@ -14,7 +14,7 @@ columnid = input('Enter the name of the column containing the IDs to be hashed: 
 exportpath = input('Enter the absolute path of the file to export the new file with the Hashed IDs: ')
 
 #Convert column of patient IDs into a list
-df = pd.read_csv(importpath)
+df = pd.read_csv(importpath,sep=',')
 patientidlist = df[columnid].values.tolist()
 
 #Create new list of hashed IDs
