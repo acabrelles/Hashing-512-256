@@ -1,5 +1,5 @@
-PatientID,EUCanImage-ID
-123,5l6j434l35
-234,fj48djw9ew
-345,47fj389fkl
-456,d9l3dok5f9
+PatientID (0010,0020);EUCanImage-ID
+123;5l6j434l35
+234;fj48djw9ew
+345;47fj389fkl
+456;d9l3dok5f9
