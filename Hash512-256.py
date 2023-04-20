@@ -33,4 +33,4 @@ for index in range(len(df)):
 df[hashid] = hashlist
 
 #Export modified data frame into a new csv
-df.to_csv(exportpath,index=False)
+df.to_csv(exportpath,index=False,sep=';')
