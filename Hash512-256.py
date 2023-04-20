@@ -1,7 +1,7 @@
 import pandas as pd
 from Crypto.Hash import SHA512
 
-These are examples of the variables to be used. You can use this sytem instead of the input system below.
+#These are examples of the variables to be used. You can use this sytem instead of the input system below.
 importpath = '/Users/aldar/Documents/CRG-EGA/EuCanImage/Hashing/Import/Test.csv'
 secretkey = 'SgkZFJIlWeTJ7rZaeJq8jhRrWqknQSKfOCF99cRMIEg07aBPMkTivFjtn7XE83pu'
 columnid = 'PatientID (0010,0020)'
