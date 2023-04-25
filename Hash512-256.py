@@ -2,12 +2,11 @@ import pandas as pd
 from Crypto.Hash import SHA512
 
 #These are examples of the variables to be used. You can use this sytem instead of the input system below.
-importpath = 'Import/Test.csv'
-importpath = 'Import/EUCANIMAGE_UMU_Subject_Tracker.csv'
+importpath = 'CSV/EUCANIMAGE_UMU_Subject_Tracker.csv'
 secretkey = 'SgkZFJIlWeTJ7rZaeJq8jhRrWqknQSKfOCF99cRMIEg07aBPMkTivFjtn7XE83pu'
-columnid = 'PatientID (0010,0020)'
+columnid = 'PatientID'
 hashid = 'CMRAD_Hash'
-exportpath = 'Export/TestHash.csv'
+exportpath = 'Hashed/EUCANIMAGE_UMU_Subject_Tracker_Hashed.csv'
 
 #This section can be deleted/hidden in comments if you prefer using the variables above directly instead
 #importpath = input('Enter the absolute path of the file containing the IDs to be hashed: ')
