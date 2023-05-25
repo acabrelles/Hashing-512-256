@@ -8,13 +8,6 @@ columnid = 'PatientID'
 hashid = 'CMRAD_Hash'
 exportpath = 'Hashed/EUCANIMAGE_UMU_Subject_Tracker_Hashed.csv'
 
-#This section can be deleted/hidden in comments if you prefer using the variables above directly instead
-#importpath = input('Enter the absolute path of the file containing the IDs to be hashed: ')
-#secretkey = input('Enter the secret key to be used for hashing: ')
-#columnid = input('Enter the name of the column containing the IDs to be hashed: ')
-#hashid = input('Enter the name of the column containing the hashed IDs: ')
-#exportpath = input('Enter the absolute path of the file to export the new file with the Hashed IDs: ')
-
 #Convert column of patient IDs into a list
 df = pd.read_csv(importpath,sep=';')
 patientidlist = df[columnid].values.tolist()
@@ -23,11 +16,13 @@ patientidlist = df[columnid].values.tolist()
 hashlist = []
 for index in range(len(df)):
     patientid = patientidlist[index]
-    text = str(secretkey)+str(patientid)
+    patientidString = str(patientid).replace("-","")  # Omit '-' characters
+    text = str(secretkey)+str(patientidString)
     hashObject = SHA512.new(truncate='256')
     hashObject.update(text.encode('utf-8'))
     digest = hashObject.hexdigest()
     hashlist.append(digest)
+    print(patientidString + "  " + digest)
 
 #Add new column of hashed IDs into the data frame
 df[hashid] = hashlist
