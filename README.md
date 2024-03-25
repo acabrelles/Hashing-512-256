@@ -70,6 +70,7 @@ hashid = 'HashedID'
 Once these parameters have been changed, you are ready to run the script.
 
 ### Transforming the CSV file
+### With Docker
 To transform the original CSV file into a transformed version containing hashed IDs, after having provided with the original CSV file and modified the configuration file, you will need to run the next line in the terminal with the running Docker container:
 ```bash
 docker exec hashing python Hash512-256.py
@@ -79,3 +80,15 @@ It should not take long for it to finish. Once it is done, you can stop the Dock
 docker stop hashing
 ```
 Once the hashing is done, and the container is stopped, you can close the terminal.
+
+### Without Docker
+Just like before, you will need to provide with the CSV file and modify the configuration file as specified previously. Then, you can run the next line in a terminal containing the repository folder:
+
+```bash
+python Hash512-256.py
+```
+or
+```bash
+python <path-to-folder>/Hash512-256.py
+```
+Once the hashing is done, you can close the terminal.
