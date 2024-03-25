@@ -2,9 +2,9 @@
 
 This repository was created with the main goal of aiding researchers encrypt patient IDs in SHA-512/256. The simple script will add a column with the encrypted IDs in an existing CSV file containing a list of patient IDs.
 
-- Code Language is written in [Python 3.11](https://www.python.org/downloads/release/python-3110/)
+- Code Language is written in [Python 3.11](https://www.python.org/downloads/release/python-3110/).
 - [Pandas](https://pandas.pydata.org/docs/getting_started/install.html) is used to deal with CSV in a simple manner.
-- [PyCryptodome](https://pypi.org/project/pycryptodome/) is used to do hashing SHA-512/256 in a simple manner
+- [PyCryptodome](https://pypi.org/project/pycryptodome/) is used to do hashing SHA-512/256 in a simple manner.
 
 ## Installation guide
 This script was originally intended to be used without Docker, but certain policies in hospitals or educational centers will forbid to download libraries easily. With Docker, this can be avoided by creating a container with the environment prepared for direct use.
