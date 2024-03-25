@@ -1,5 +1,5 @@
 #These are examples of the variables to be used.
-#Everything will be run locally, so there are no privacy issues for putting sensitive information here.
+#Everything will be run locally.
 
 #SKIP THESE TWO PARAMETERS UNLESS YOU NEED TO. Modify these two parameters if you are going to run the script without Docker.
 #importfolder = Provide with the path of the folder containing the CSV file to be modified
