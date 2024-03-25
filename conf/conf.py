@@ -17,4 +17,4 @@ secretkey = 'SgkZFJIlWeTJ7rZaeJq8jhRrWqknQSKfOCF99cRMIEg07aBPMkTivFjtn7XE83pu'
 #columnid = Provide the name of the column containing the ID's to be hashed.
 columnid = 'PatientID (0010,0020)'
 #hashid = Provide the name of the desired name containing the final hashed ID's
-hashid = 'CMRAD Hash'
+hashid = 'HashedID'
