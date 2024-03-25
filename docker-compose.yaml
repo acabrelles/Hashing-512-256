@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+
+  hashing:
+    build:
+      context: ./
+    container_name: hashing
+    volumes:
+      - ./import:/usr/src/app/import
+      - ./output:/usr/src/app/output
+      - ./conf:/usr/src/app/conf

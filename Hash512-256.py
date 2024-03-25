@@ -1,19 +1,20 @@
 import pandas as pd
 from Crypto.Hash import SHA512
+import conf.conf as conf
 
-#These are examples of the variables to be used. You can use this sytem instead of the input system below.
-importpath = '/Users/aldar/Documents/CRG-EGA/EuCanImage/Hashing-512-256/Import/Test.csv'
-secretkey = 'SgkZFJIlWeTJ7rZaeJq8jhRrWqknQSKfOCF99cRMIEg07aBPMkTivFjtn7XE83pu'
-columnid = 'PatientID (0010,0020)'
-hashid = 'CMRAD Hash'
-exportpath = '/Users/aldar/Documents/CRG-EGA/EuCanImage/Hashing-512-256/Export/TestHash.csv'
+#Configuring input path
+importfolder = conf.importfolder
+importfile = conf.importfile
+importpath = importfolder+'/'+importfile
+#Configuring output path
+outputfolder = conf.outputfolder
+outputfile = conf.outputfile
+outputpath = outputfolder+'/'+outputfile
 
-#This section can be deleted/hidden in comments if you prefer using the variables above directly instead
-#importpath = input('Enter the absolute path of the file containing the IDs to be hashed: ')
-#secretkey = input('Enter the secret key to be used for hashing: ')
-#columnid = input('Enter the name of the column containing the IDs to be hashed: ')
-#hashid = input('Enter the name of the column containing the hashed IDs: ')
-#exportpath = input('Enter the absolute path of the file to export the new file with the Hashed IDs: ')
+#Calling on config variables
+secretkey = conf.secretkey
+columnid = conf.columnid
+hashid = conf.hashid
 
 #Convert column of patient IDs into a list
 df = pd.read_csv(importpath,sep=';')
@@ -33,4 +34,4 @@ for index in range(len(df)):
 df[hashid] = hashlist
 
 #Export modified data frame into a new csv
-df.to_csv(exportpath,index=False,sep=';')
+df.to_csv(outputpath,index=False,sep=';')
