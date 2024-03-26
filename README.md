@@ -7,7 +7,7 @@ This repository was created with the main goal of aiding researchers encrypt pat
 - [PyCryptodome](https://pypi.org/project/pycryptodome/) is used to do hashing SHA-512/256 in a simple manner.
 
 ## Installation guide
-This script was originally intended to be used without Docker, but certain policies in hospitals or educational centers will forbid to download libraries easily. With Docker, this can be avoided by creating a container with the environment prepared for direct use.
+This script was originally intended to be used without Docker. With Docker, the amounts of steps to be taken will be minimized by the creation of a container with the environment prepared for direct use.
 
 ### Installation with Docker
 First of all, download and install the [Docker engine](https://www.docker.com). You can use [Docker Desktop](https://www.docker.com/products/docker-desktop/) in case of doubt. You will be asked to create an account, but this step can be skipped.
